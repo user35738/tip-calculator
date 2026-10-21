@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Թեյավճարի հաշվիչ</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"></head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="container">
+
+        <div class="icon-box">✦</div>
+
+        <p class="subtitle">SMART MONEY TOOLS</p>
+
+        <h1>Թեյավճարի <span>հաշվիչ</span></h1>
+
+        <p class="description">
+            Հաշվիր թեյավճարն ու ընդհանուր գումարը
+            մի քանի վայրկյանում։
+        </p>
+
+        <div class="form-group">
+            <label for="bill">Հաշվի գումարը</label>
+
+            <div class="input-wrapper">
+                <input
+                    type="number"
+                    id="bill"
+                    placeholder="Օրինակ՝ 5000"
+                    min="0"
+                    step="any"
+                >
+                <span class="input-unit">֏</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="tip">Թեյավճարի տոկոսը</label>
+
+            <div class="input-wrapper">
+                <input
+                    type="number"
+                    id="tip"
+                    placeholder="Օրինակ՝ 10"
+                    min="0"
+                    max="1000"
+                    step="any"
+                >
+                <span class="input-unit">%</span>
+            </div>
+        </div>
+
+        <div class="tip-options">
+            <button type="button" class="tip-option" data-tip="5">5%</button>
+            <button type="button" class="tip-option" data-tip="10">10%</button>
+            <button type="button" class="tip-option" data-tip="15">15%</button>
+            <button type="button" class="tip-option" data-tip="20">20%</button>
+        </div>
+
+        <button id="calculate" class="calculate-btn" type="button">
+            <span>Հաշվարկել</span>
+            <span class="arrow">↗</span>
+        </button>
+
+        <p id="error" class="error-message" role="alert"></p>
+
+        <section class="result-card" aria-live="polite">
+            <p class="result-label">Ընդհանուր գումարը</p>
+
+            <div class="total-line">
+                <span id="total">0.00</span>
+                <span class="currency">֏</span>
+            </div>
+
+            <div class="result-divider"></div>
+
+            <div class="tip-summary">
+                <span>Թեյավճարի գումարը</span>
+                <strong><span id="tipAmount">0.00</span> ֏</strong>
+            </div>
+        </section>
+
+        <p class="footer-text">
+            <span>✧</span> Պարզ հաշվարկ, խելացի լուծում
+        </p>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
