@@ -2,6 +2,8 @@
 
 A modern, responsive Tip Calculator built with **HTML, CSS, and JavaScript**. It helps users quickly calculate tips and split the bill with ease.
 
+![Project Screenshot](Calc_Screenshot.png)
+
 ## ✨ Features
 
 - 🧾 Calculate tips based on the bill amount
